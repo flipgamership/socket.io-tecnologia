@@ -1,0 +1,24 @@
+{
+  "name": "socket.io-tecnologia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node src / index.js",
+    "dev": "nodemon --exec npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/node": "^7.16.7",
+    "@babel/preset-env": "^7.16.7"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "socket.io": "^4.4.0"
+  }
+}
