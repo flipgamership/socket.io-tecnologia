@@ -3,14 +3,17 @@ import { Server as webSocket } from "socket.io";
 import http from 'http'
 
 const app = express()
-const httpserver = http.createServer(app)
-const io = new webSocket(httpserver)
+const server = http.createServer(app)
+const io = new webSocket(server)
 
-io.on('connection', ()=>{
-    console.log('new connection')
+io.on('connection', (socket)=>{
+    console.log('new connection: ' , socket.id)
+    socket.on('client:newNote', data=>{
+        console.log(data)
+    })
 })
 
 app.use(express.static(__dirname + '/public'))
-httpserver.listen(4000)
-app.listen(3000)
+server.listen(3000)
+
 console.log('server on port 3000')
