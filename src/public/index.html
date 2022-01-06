@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    ,
     <div class="container h-100">
       <div class="row h-100">
         <div class="col-md-4 my-auto">
@@ -26,7 +25,7 @@
               name="title"
               placeholder="Write a title"
               class="form-control rounded-0 mb-3"
-              autofocus
+              autofocus required
             />
             <textarea
               name="description"
@@ -39,12 +38,14 @@
           </form>
         </div>
         <div class="col-md-8">
-          notes
           <div id="notes"></div>
         </div>
       </div>
     </div>
+  
     <script src="/socket.io/socket.io.min.js"></script>
-    <script src="main.js"></script>
+    <script src="./ui.js"></script>
+    <script src="./sockets.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
